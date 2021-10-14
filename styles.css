@@ -9,7 +9,7 @@ body {
     background: #2f513f;
     box-sizing: border-box;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #FFCC99;    
+    color: var(--font);    
 }
 h4 {
     padding: 0px;
