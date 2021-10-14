@@ -1,23 +1,47 @@
+:root {
+    --font: #F0E0C2;
+}
+
 body {
     border: 0;
     margin: 0;
     padding: 0;
     background: #2f513f;
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #FFCC99;    
 }
 h4 {
     padding: 0px;
     margin: 10px;
-    color: white;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
 
+.screen-width--patch {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%)
+}
+
+::-webkit-scrollbar-track {
+    background: #F9F2E5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D5C2A0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A49376;
+}
 
 main {
+    color: var(--font); 
     height: 100vh;
     width: 100vw;
     background: #2f513f;
-    color: beige;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,16 +64,15 @@ main .modal{
     border-radius: 10px;
     background: linear-gradient(145deg, #2a4939, #325743);
     box-shadow: 8px 8px 16px #21392c, -8px -8px 16px #3d6952;
-    color: beige;
 }
 
 button {
+    color: var(--font); 
     border-width: 0px;
     border-radius: 4px;
     background: #2f513f;
     box-shadow:  2px 2px 4px #21392c,
              -2px -2px 4px #3d6952;
-    color: beige;
     margin: 4px;
     padding: .5em 1.5em;
 }
@@ -76,6 +99,7 @@ button:active {
 }
 
 .container {
+    color: var(--font); 
     display: flex;
     justify-content: center;
     align-items: left;
@@ -85,7 +109,7 @@ button:active {
     box-shadow: 8px 8px 16px #21392c, -8px -8px 16px #3d6952;
     padding: 16px;
     margin: 4px;
-    transition: background-color 1s;
+    transition: background-color 0.7s;
     transition-delay: 0.1s;
 }
 
@@ -96,7 +120,7 @@ button:active {
     flex-direction: row;
     margin: 8px;
     padding: 0px;
-    transition: background-color 1s;
+    transition: background-color 0.7s;
     transition-delay: 0.1s;
 }
 
