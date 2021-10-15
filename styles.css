@@ -8,8 +8,8 @@ body {
     padding: 0;
     background: #2f513f;
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--font);    
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font);
 }
 h4 {
     padding: 0px;
@@ -57,14 +57,14 @@ main .modal{
     align-items: center;
 }
 
-.readme button{
+/* .readme button{
     border: none;
     padding: 12px;
     margin: 12px;
     border-radius: 10px;
     background: linear-gradient(145deg, #2a4939, #325743);
     box-shadow: 8px 8px 16px #21392c, -8px -8px 16px #3d6952;
-}
+} */
 
 button {
     color: var(--font); 
@@ -75,6 +75,8 @@ button {
              -2px -2px 4px #3d6952;
     margin: 4px;
     padding: .5em 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
 }
 
 /* .button-bm {
@@ -98,6 +100,11 @@ button:active {
     padding: .5em 1.5em;
 }
 
+.round-energy{
+    margin: 0;
+    padding: 0 12px;
+}
+
 .container {
     color: var(--font); 
     display: flex;
@@ -107,8 +114,8 @@ button:active {
     border-radius: 10px;
     background: linear-gradient(145deg, #2a4939, #325743);
     box-shadow: 8px 8px 16px #21392c, -8px -8px 16px #3d6952;
-    padding: 16px;
-    margin: 4px;
+    padding: 4px 12px;
+    margin: 0px;
     transition: background-color 0.7s;
     transition-delay: 0.1s;
 }
@@ -118,14 +125,15 @@ button:active {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 8px;
-    padding: 0px;
+    margin: 0px;
+    padding: 8px 0px;
     transition: background-color 0.7s;
     transition-delay: 0.1s;
 }
 
 .container2 button {
     padding: 12px;
+    font-weight: bold;
 }
 
 .button-container {
@@ -136,8 +144,8 @@ button:active {
     border-radius: 10px;
     background: linear-gradient(145deg, #2a4939, #325743);
     box-shadow: 8px 8px 16px #21392c, -8px -8px 16px #3d6952;
-    margin: 12px;
-    padding: 12px;
+    margin: 0 12px;
+    padding: 4px 12px;
 }
 
 .button-container-child {
@@ -147,8 +155,7 @@ button:active {
     flex-direction: row;
     border-radius: 10px;
     margin: 0;
-    padding: 0px;
-    
+    padding: 8px 0px;
 }
 
 
