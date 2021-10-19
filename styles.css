@@ -145,6 +145,8 @@ button:active {
 }
 
 .wld-container {
+    margin: 0px;
+    width: 100vw;
     padding: 8px;
     display: flex;
     justify-content: start;
