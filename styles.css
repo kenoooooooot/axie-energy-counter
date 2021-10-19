@@ -13,7 +13,7 @@ body {
 }
 h4 {
     padding: 0px;
-    margin: 12px 12px;
+    margin: 4px 12px;
 }
 ::-webkit-scrollbar {
     width: 0px;
@@ -37,6 +37,8 @@ h4 {
     background: #A49376;
 }
 
+
+
 main {
     color: var(--font); 
     height: 100vh;
@@ -47,14 +49,7 @@ main {
     align-items: center;
     flex-direction: column;
     padding: 8px;
-    transition: background-color 1s;
-}
-
-main .modal{
-    margin: 3em 0em;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    transition: background-color 0.7s;
 }
 
 /* .readme button{
@@ -159,4 +154,85 @@ button:active {
     padding: 8px 0px;
 }
 
+.wld-container {
+    padding: 8px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: background-color 0.7s;
+}
+
+.WLD {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.W {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.L {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.D {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.WLD .btn-counter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    color: var(--font); 
+    border-width: 0px;
+    border-radius: 4px;
+    background: #2f513f;
+    box-shadow:  2px 2px 2px #21392c,
+             -2px -2px 2px #3d6952;
+    margin: 4px;
+    padding: 4px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    transition: background-color 0.7s;
+}
+
+.WLD .btn-counter:active {
+    border-width: 0px;
+    border-radius: 4px;
+    background: #2f513f;
+    box-shadow: inset 4px 4px 8px #21392c,
+                inset -4px -4px 8px #3d6952;
+    margin: 4px;
+    padding: 4px 16px;
+}
+
+.wld-counter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--font); 
+    border-width: 0px;
+    border-radius: 4px;
+    background: #2f513f;
+    box-shadow:  inset 2px 2px 2px #21392c,
+             inset -2px -2px 2px #3d6952;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    padding: 4px 16px;
+    margin: 4px;
+    transition: background-color 0.7s;
+}
 

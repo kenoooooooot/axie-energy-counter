@@ -8,6 +8,16 @@ const btnsGain = document.querySelectorAll(".btn-gain");
 const btnsDestroy = document.querySelectorAll(".btn-destroy");
 const btnsReset = document.querySelector('#btn-reset');
 const btnsEnd = document.querySelector('#btn-end');
+const btnsWin = document.querySelectorAll(".win");
+const valueWin = document.querySelector('#w-count');
+const btnsLose = document.querySelectorAll(".lose");
+const valueLose = document.querySelector('#l-count');
+const btnsDraw = document.querySelectorAll(".draw");
+const valueDraw = document.querySelector('#d-count');
+const btnsR = document.querySelectorAll(".reset")
+
+
+//Clamp min-max
 
 const min = 0;
 const max = 10;
@@ -19,6 +29,9 @@ let gainCount = 0;
 let destroyCount = 0;
 let roundCount = 2;
 let nextTurnEnergy = 2;
+let wCount = 0;
+let lCount = 0;
+let dCount = 0;
 
 //Energy Gain
 
@@ -87,6 +100,11 @@ btnsEnd.addEventListener("click", function(){
         document.getElementById("container").style.boxShadow = '8px 8px 16px #3e1818, -8px -8px 16px #742c2c';
         document.getElementById("button-container").style.background ='linear-gradient(145deg, #501f1f, #5f2424)';
         document.getElementById("button-container").style.boxShadow = '8px 8px 16px #3e1818, -8px -8px 16px #742c2c';
+        document.getElementById("wld-container").style.backgroundColor ='#592222';
+        var btnBloodCounter = document.getElementsByClassName("wld-counter");
+        for (i=0, x = btnBloodCounter.length; i < x; i++)
+        btnBloodCounter[i].style.backgroundColor ='#592222',
+        btnBloodCounter[i].style.boxShadow = 'inset 2px 2px 2px #240e0e, inset -2px -2px 2px #8e3636';
         energy = clamp((Number(value.textContent) + gainCount - usedCount - destroyCount), min, max);
         value.textContent = clamp((Number(energy + nextTurnEnergy)), min, max);
         valueRound.textContent = roundCount++;
@@ -122,6 +140,12 @@ btnsReset.addEventListener("click", function(e){
         document.getElementById("container").style.boxShadow = null;
         document.getElementById("button-container").style.background = null;
         document.getElementById("button-container").style.boxShadow = null;
+        document.getElementById("wld-container").style.backgroundColor = null;
+        var btnBloodCounter = document.getElementsByClassName("wld-counter");
+        for (i=0, x = btnBloodCounter.length; i < x; i++)
+        btnBloodCounter[i].style.backgroundColor = null,
+        btnBloodCounter[i].style.boxShadow = null;
+
     usedCount = 0;
     gainCount = 0;
     destroyCount = 0;
@@ -131,4 +155,50 @@ btnsReset.addEventListener("click", function(e){
     valueRound.textContent = 1;
     roundCount = 2;
     value.textContent = 3;
+});
+
+//Win Count
+
+btnsWin.forEach(function (btn) {
+    btn.addEventListener("click", function(e){
+        const styles = e.currentTarget.classList;
+        if(styles.contains('win')){
+            wCount++;
+        }
+        valueWin.textContent = wCount;
+    });
+});
+
+//Lose Count
+btnsLose.forEach(function (btn) {
+    btn.addEventListener("click", function(e){
+        const styles = e.currentTarget.classList;
+        if(styles.contains('lose')){
+            lCount++;
+        }
+        valueLose.textContent = lCount;
+    });
+});
+
+//Draw Count
+btnsDraw.forEach(function (btn) {
+    btn.addEventListener("click", function(e){
+        const styles = e.currentTarget.classList;
+        if(styles.contains('draw')){
+            dCount++;
+        }
+        valueDraw.textContent = dCount;
+    });
+});
+
+//Reset Counter for WLD
+btnsR.forEach(function (btn) {
+    btn.addEventListener("click", function(e){
+        wCount = 0;
+        lCount = 0;
+        dCount = 0;
+        valueWin.textContent = 0;
+        valueLose.textContent = 0;
+        valueDraw.textContent = 0;
+    });
 });
